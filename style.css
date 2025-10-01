@@ -1,0 +1,149 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #2a377f, #04234f, #234b72);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+      color: white;
+    }
+
+    /* Background animation */
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Glassmorphism form */
+    .form-container {
+      background: rgba(0, 2, 7, 0.15);
+      backdrop-filter: blur(15px);
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 600px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .form-container img {
+      display: block;
+      margin: 0 auto 15px auto;
+      max-width: 100px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: white;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 12px;
+      display: block;
+      color: #f8f8f8;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      transition: 0.3s;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #ddd;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      background: rgba(255, 255, 255, 0.35);
+      box-shadow: 0 0 8px rgba(30, 144, 255, 0.9);
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 20px;
+      background: linear-gradient(135deg, #1E90FF, #0047AB);
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 15px rgba(0, 71, 171, 0.6);
+    }
+
+    button:hover {
+      transform: scale(1.07);
+      background: linear-gradient(135deg, #00BFFF, #1E90FF);
+      box-shadow: 0 6px 20px rgba(30, 144, 255, 0.9);
+    }
+
+    /* Decorative circles */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      animation: pulse 8s infinite ease-in-out;
+    }
+    .circle.one {
+      width: 150px; height: 150px;
+      top: -50px; left: -50px;
+    }
+    .circle.two {
+      width: 200px; height: 200px;
+      bottom: -80px; right: -80px;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.2); opacity: 0.3; }
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .form-container {
+        padding: 20px;
+      }
+      h2 { font-size: 22px; }
+    }

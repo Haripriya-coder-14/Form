@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mattress Enquiry Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Floating circles -->
+  <div class="circle one"></div>
+  <div class="circle two"></div>
+
+  <div class="form-container">
+    <img src="https://cdn-icons-png.flaticon.com/512/849/849969.png" alt="Mattress Icon">
+    <h2>Enquiry Form</h2>
+    <form action="#" method="post">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your 10-digit phone number" pattern="[0-9]{10}" required>
+
+      <label for="mattress">Mattress Type *</label>
+      <select id="mattress" name="mattress" required>
+        <option value="">--Select Mattress Type--</option>
+        <option value="memory">Memory Foam</option>
+        <option value="spring">Spring Mattress</option>
+        <option value="latex">Latex Mattress</option>
+        <option value="orthopedic">Orthopedic Mattress</option>
+      </select>
+
+      <label for="size">Preferred Size *</label>
+      <select id="size" name="size" required>
+        <option value="">--Select Size--</option>
+        <option value="single">Single</option>
+        <option value="double">Double</option>
+        <option value="queen">Queen</option>
+        <option value="king">King</option>
+      </select>
+
+      <label for="thickness">Mattress Thickness *</label>
+      <select id="thickness" name="thickness" required>
+        <option value="">--Select Thickness--</option>
+        <option value="4">4 Inches</option>
+        <option value="6">6 Inches</option>
+        <option value="8">8 Inches</option>
+        <option value="10">10 Inches</option>
+      </select>
+
+      <label for="firmness">Preferred Firmness *</label>
+      <select id="firmness" name="firmness" required>
+        <option value="">--Select Firmness--</option>
+        <option value="soft">Soft</option>
+        <option value="medium">Medium</option>
+        <option value="firm">Firm</option>
+      </select>
+
+      <label for="delivery">Delivery Preference</label>
+      <select id="delivery" name="delivery">
+        <option value="">--Select Delivery--</option>
+        <option value="home">Home Delivery</option>
+        <option value="store">Pick-up from Store</option>
+      </select>
+
+      <label for="message">Additional Requirements</label>
+      <textarea id="message" name="message" rows="4" placeholder="Write your queries here..."></textarea>
+
+      <button type="submit">Submit Enquiry</button>
+    </form>
+  </div>
+</body>
+</html>
