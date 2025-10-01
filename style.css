@@ -37,6 +37,7 @@
       max-height: 80vh;   /* max height 80% of viewport */
         overflow-y: auto;   /* vertical scroll if content overflows */
         animation: fadeIn 1.2s ease;
+      scroll-behavior: smooth;
     }
 
     @keyframes fadeIn {
@@ -151,3 +152,4 @@
       h2 { font-size: 22px; }
 
     }
+
