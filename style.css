@@ -38,6 +38,7 @@
         overflow-y: auto;   /* vertical scroll if content overflows */
         animation: fadeIn 1.2s ease;
       scroll-behavior: smooth;
+      overflow-y: scroll;
     }
 
     @keyframes fadeIn {
@@ -152,4 +153,5 @@
       h2 { font-size: 22px; }
 
     }
+
 
